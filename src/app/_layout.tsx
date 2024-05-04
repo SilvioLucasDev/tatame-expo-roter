@@ -26,7 +26,9 @@ export default function Layout() {
     <GluestackUIProvider config={config}>
       <StatusBar barStyle="light-content" />
       <Stack>
+        <Stack.Screen name="index" options={{ headerShown: false }} />
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="(academy)" />
       </Stack>
     </GluestackUIProvider>
   );

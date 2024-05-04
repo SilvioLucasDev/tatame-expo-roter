@@ -1,11 +1,13 @@
 import { StyleSheet } from 'react-native';
 import { Text, View } from '@gluestack-ui/themed';
 import React from 'react';
+import { Link } from 'expo-router';
 
-export default function Home() {
+export default function IndexScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Home</Text>
+      <Text style={styles.text}>Aqui é a Tela de Login</Text>
+      <Link href={'/(tabs)/home'}>Logar</Link>
     </View>
   );
 }
