@@ -1,6 +1,5 @@
-import { StyleSheet, View } from 'react-native';
-// import { Text } from 'react-native';
-import { Text } from '@gluestack-ui/themed';
+import { StyleSheet } from 'react-native';
+import { Text, View } from '@gluestack-ui/themed';
 import React from 'react';
 
 export default function Home() {

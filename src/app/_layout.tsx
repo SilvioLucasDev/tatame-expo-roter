@@ -15,7 +15,7 @@ export default function Layout() {
   const [fontsLoaded] = useFonts({
     Roboto_700Bold,
     Roboto_400Regular,
-    RobotoMono_Regular: require('@/assets/fonts/RobotoMono-VariableFont_wght.ttf'),
+    RobotoMono_Regular: require('@/assets/fonts/RobotoMono.ttf'),
   });
 
   if (fontsLoaded) {
