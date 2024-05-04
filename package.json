@@ -13,6 +13,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "@expo-google-fonts/roboto": "^0.2.3",
     "@expo/vector-icons": "^14.0.0",
     "@gluestack-style/react": "^1.0.54",
     "@gluestack-ui/config": "^1.1.18",
