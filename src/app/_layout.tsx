@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { StatusBar } from 'react-native';
 import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
@@ -7,19 +7,29 @@ import { useFonts } from 'expo-font';
 import { GluestackUIProvider } from '@gluestack-ui/themed';
 import { config } from '@/config/gluestack-ui.config';
 
-import { Roboto_400Regular, Roboto_700Bold } from '@expo-google-fonts/roboto';
+import { Roboto_700Bold, Roboto_400Regular } from '@expo-google-fonts/roboto';
 
 SplashScreen.preventAutoHideAsync();
 
 export default function Layout() {
-  const [fontsLoaded] = useFonts({
+  const [fontsLoaded, fontsError] = useFonts({
     Roboto_700Bold,
     Roboto_400Regular,
     RobotoMono_Regular: require('@/assets/fonts/RobotoMono.ttf'),
   });
 
-  if (fontsLoaded) {
-    SplashScreen.hideAsync();
+  useEffect(() => {
+    if (fontsError) throw fontsError;
+  }, [fontsError]);
+
+  useEffect(() => {
+    if (fontsLoaded) {
+      SplashScreen.hideAsync();
+    }
+  }, [fontsLoaded]);
+
+  if (!fontsLoaded) {
+    return null;
   }
 
   return (
