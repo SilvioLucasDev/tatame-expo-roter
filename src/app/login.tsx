@@ -1,12 +1,15 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 
+import { Link } from 'expo-router';
+
 import { Text, View } from '@gluestack-ui/themed';
 
-export default function AcademyScreen() {
+export default function LoginScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Home da academia</Text>
+      <Text style={styles.text}>Aqui é a Tela de Login</Text>
+      <Link href="/(tabs)/home">Logar</Link>
     </View>
   );
 }

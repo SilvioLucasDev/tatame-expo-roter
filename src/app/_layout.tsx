@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { StatusBar } from 'react-native';
+
 import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
 import { useFonts } from 'expo-font';
+import * as SplashScreen from 'expo-splash-screen';
 
 import { GluestackUIProvider } from '@gluestack-ui/themed';
 import { config } from '@/config/gluestack-ui.config';
@@ -10,6 +11,10 @@ import { config } from '@/config/gluestack-ui.config';
 import { Roboto_700Bold, Roboto_400Regular } from '@expo-google-fonts/roboto';
 
 SplashScreen.preventAutoHideAsync();
+
+export const unstable_settings = {
+  initialRouteName: 'index',
+};
 
 export default function Layout() {
   const [fontsLoaded, fontsError] = useFonts({
@@ -28,18 +33,21 @@ export default function Layout() {
     }
   }, [fontsLoaded]);
 
-  if (!fontsLoaded) {
-    return null;
-  }
-
   return (
     <GluestackUIProvider config={config}>
       <StatusBar barStyle="light-content" />
-      <Stack>
-        <Stack.Screen name="index" options={{ headerShown: false }} />
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="(academy)" />
-      </Stack>
+      {fontsLoaded && (
+        <Stack>
+          <Stack.Screen name="index" options={{ headerShown: false }} />
+          <Stack.Screen name="login" options={{ headerShown: false }} />
+          <Stack.Screen
+            name="notification"
+            options={{ title: 'Notificações' }}
+          />
+          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+          <Stack.Screen name="(academy)" />
+        </Stack>
+      )}
     </GluestackUIProvider>
   );
 }

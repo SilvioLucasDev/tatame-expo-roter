@@ -1,8 +1,9 @@
-import { StyleSheet } from 'react-native';
-import { Text, View } from '@gluestack-ui/themed';
 import React from 'react';
+import { StyleSheet } from 'react-native';
 
-export default function DebitsScreen() {
+import { Text, View } from '@gluestack-ui/themed';
+
+export default function DebitScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Tela de Débitos</Text>

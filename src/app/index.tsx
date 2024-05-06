@@ -1,15 +1,15 @@
 import { StyleSheet } from 'react-native';
-import { Text, View } from '@gluestack-ui/themed';
-import React from 'react';
-import { Link } from 'expo-router';
+
+import { router } from 'expo-router';
 
 export default function IndexScreen() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Aqui é a Tela de Login</Text>
-      <Link href={'/(tabs)/home'}>Logar</Link>
-    </View>
-  );
+  function afterSplash() {
+    setTimeout(() => {
+      router.push('/login');
+    }, 2000);
+  }
+
+  afterSplash();
 }
 
 const styles = StyleSheet.create({

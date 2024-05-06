@@ -1,7 +1,9 @@
-import { StyleSheet } from 'react-native';
-import { Text, View } from '@gluestack-ui/themed';
 import React from 'react';
+import { StyleSheet } from 'react-native';
+
 import { Link } from 'expo-router';
+
+import { Text, View } from '@gluestack-ui/themed';
 
 export default function AcademyScreen() {
   return (

@@ -1,12 +1,11 @@
-import React from 'react';
 import { StyleSheet } from 'react-native';
 
 import { Text, View } from '@gluestack-ui/themed';
 
-export default function EvolutionScreen() {
+export default function NotificationScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Tela de Evolução</Text>
+      <Text style={styles.title}>Tela de Notificação</Text>
     </View>
   );
 }
@@ -14,10 +13,10 @@ export default function EvolutionScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
+    justifyContent: 'center',
   },
-  text: {
-    fontSize: 22,
+  title: {
+    fontSize: 20,
   },
 });

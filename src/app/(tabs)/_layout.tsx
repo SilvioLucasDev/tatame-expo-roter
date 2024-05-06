@@ -1,6 +1,7 @@
 import React from 'react';
-import { Tabs } from 'expo-router';
+import { Pressable } from 'react-native';
 
+import { Link, Tabs } from 'expo-router';
 import { Foundation, Ionicons } from '@expo/vector-icons';
 
 export default function TabLayout() {
@@ -25,6 +26,22 @@ export default function TabLayout() {
           title: 'Home',
           tabBarIcon: ({ color, size }) => (
             <Foundation name="home" size={size} color={color} />
+          ),
+          headerRight: () => (
+            <Link href="/notification" asChild>
+              <Pressable>
+                {({ pressed }) => (
+                  <Ionicons
+                    name="notifications"
+                    size={25}
+                    style={{
+                      marginRight: 15,
+                      opacity: pressed ? 0.5 : 1,
+                    }}
+                  />
+                )}
+              </Pressable>
+            </Link>
           ),
         }}
       />

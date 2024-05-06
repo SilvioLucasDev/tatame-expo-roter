@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import { Tabs, useNavigation } from 'expo-router';
 
+import { Tabs, useNavigation } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 
 export default function TabLayout() {
@@ -46,7 +46,7 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="debits"
+        name="debit"
         options={{
           headerShown: false,
           title: 'Débitos',
