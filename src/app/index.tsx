@@ -1,5 +1,3 @@
-import { StyleSheet } from 'react-native';
-
 import { router } from 'expo-router';
 
 export default function IndexScreen() {
@@ -11,14 +9,3 @@ export default function IndexScreen() {
 
   afterSplash();
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    fontSize: 22,
-  },
-});

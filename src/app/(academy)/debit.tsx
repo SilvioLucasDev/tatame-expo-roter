@@ -1,23 +1,7 @@
 import React from 'react';
-import { StyleSheet } from 'react-native';
 
-import { Text, View } from '@gluestack-ui/themed';
+import DebitScreen from '@/screens/Academy/Debit/Debit';
 
-export default function DebitScreen() {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Tela de Débitos</Text>
-    </View>
-  );
+export default function Debit() {
+  return <DebitScreen />;
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
-    fontSize: 22,
-  },
-});
