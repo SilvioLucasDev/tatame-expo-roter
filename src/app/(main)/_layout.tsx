@@ -4,7 +4,7 @@ import { Pressable } from 'react-native';
 import { Link, Tabs } from 'expo-router';
 import { Foundation, Ionicons } from '@expo/vector-icons';
 
-export default function TabLayout() {
+export default function MainTabLayout() {
   return (
     <Tabs
       screenOptions={{

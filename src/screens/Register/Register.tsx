@@ -15,7 +15,7 @@ export default function RegisterScreen() {
       </Box>
 
       <Box p="$5">
-        <Link href="/login">Voltar para o Login</Link>
+        <Link href="/">Voltar para o Login</Link>
       </Box>
     </View>
   );

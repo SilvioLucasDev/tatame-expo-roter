@@ -1,11 +1,7 @@
-import { router } from 'expo-router';
+import React from 'react';
 
-export default function IndexScreen() {
-  function afterSplash() {
-    setTimeout(() => {
-      router.push('/login');
-    }, 2000);
-  }
+import LoginScreen from '@/screens/Login/Login';
 
-  afterSplash();
+export default function Index() {
+  return <LoginScreen />;
 }
